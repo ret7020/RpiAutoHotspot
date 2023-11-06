@@ -5,6 +5,61 @@ import os
 import subprocess
 import threading
 
+from flask import Flask, render_template, request, redirect
+
+class WebUI:
+    def __init__(self, name, host='0.0.0.0', port='8080'):
+        self.app = Flask(name)
+        self.host = host
+        self.port = port
+        self.app.config["TEMPLATES_AUTO_RELOAD"] = True
+    
+        @self.app.route('/')
+        def __index():
+            return self.index()
+
+        @self.app.route("/add", methods=["POST"])
+        def __add():
+            return self.add()
+    
+    def index(self):
+        logs = ""
+        try:
+            with open("events.log") as fd:
+                for line in (fd.readlines() [-25:]):
+                    logs += line + "<br>"
+        except Exception as e:
+            logs = f"Can't read logs: {e}"
+
+        wpa_config = ""
+        try:
+            with open("/etc/wpa_supplicant/wpa_supplicant.conf") as fd:
+                wpa_config = fd.read()
+        except Exception as e:
+            wpa_config = "Can't read wpa_supplicant.conf: {e}"
+
+        return render_template("index.html", logs=logs, wpa_config=wpa_config.replace("\n", "<br>"))
+    def add(self):
+        ssid = request.form.get("ssid")
+        password = request.form.get("password")
+        if ssid and password:
+            config = ['\nnetwork={',
+                '\tssid="{}"'.format(ssid),
+                '\tpsk="{}"'.format(password),
+            '}']
+            config = '\n'.join(config)
+            with open("/etc/wpa_supplicant/wpa_supplicant.conf", "a") as fd:
+                fd.write(config)
+
+            return "OK"
+        else:
+            return redirect("/")
+
+
+    def run(self):
+        self.app.run(host=self.host, port=self.port)
+
+
 def led_blinking():
     t = threading.currentThread()
     while getattr(t, "do_run", True):
@@ -43,19 +98,23 @@ if __name__ == "__main__":
         time.sleep(3)
         #print("Attempt: ", attempt)
     blinking.do_run = False
-    if not connected_to_wifi:
+    if 1: #not connected_to_wifi:
         logging.info("No wifi connected, starting hotspot")
-        '''
-        access_point = pyaccesspoint.AccessPoint()
-        access_point.start()
+        
+        #access_point = pyaccesspoint.AccessPoint()
+        #access_point.start()
         logging.info("Hotspot started")
-        time.sleep(10)
+        web = WebUI(__name__)
+        web.run()
+        logging.info("WebUI started")
+        '''time.sleep(10)
         access_point.stop()
         logging.info("Hotspot stopped")
         time.sleep(5)
         logging.info("Rebooting now...")
         os.system("sudo reboot")
         '''
+        
     
 
     

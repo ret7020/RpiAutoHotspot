@@ -1,27 +1,101 @@
-20:14:28,340 root INFO Daemon started
-20:14:28,340 root INFO Checking wifi
-20:14:28,348 root INFO Wifi already connected, skipping hotspot starting
-20:14:35,610 root INFO Daemon started
-20:14:35,611 root INFO Checking wifi
-20:14:35,619 root INFO Wifi already connected, skipping hotspot starting
-20:15:23,255 root INFO Daemon started
-20:15:23,255 root INFO Checking wifi
-20:15:23,263 root INFO Wifi already connected, skipping hotspot starting
-20:15:36,760 root INFO Daemon started
-20:15:36,761 root INFO Checking wifi
-20:15:36,769 root INFO Wifi already connected, skipping hotspot starting
-20:15:39,777 root INFO Wifi already connected, skipping hotspot starting
-20:15:42,790 root INFO Wifi already connected, skipping hotspot starting
-20:16:57,934 root INFO Daemon started
-20:16:57,935 root INFO Checking wifi
-20:16:57,943 root INFO Wifi already connected, skipping hotspot starting
-20:17:09,282 root INFO Daemon started
-20:17:09,283 root INFO Checking wifi
-20:17:09,291 root INFO Wifi already connected, skipping hotspot starting
-20:17:50,212 root INFO Daemon started
-20:17:50,213 root INFO Checking wifi
-20:17:50,221 root INFO Wifi already connected, skipping hotspot starting
-20:17:53,229 root INFO Wifi already connected, skipping hotspot starting
-20:17:56,244 root INFO Wifi already connected, skipping hotspot starting
-20:17:59,258 root INFO Wifi already connected, skipping hotspot starting
-20:18:02,271 root INFO Wifi already connected, skipping hotspot starting
+20:46:56,301 root INFO Daemon started
+20:46:56,302 root INFO Checking wifi
+20:46:56,312 root INFO Wifi already connected, skipping hotspot starting
+20:46:56,312 root INFO No wifi connected, starting hotspot
+20:46:56,312 root INFO Hotspot started
+20:46:56,324 werkzeug INFO  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+20:46:57,163 werkzeug INFO 192.168.1.14 - - [06/Nov/2023 20:46:57] "[37mGET / HTTP/1.1[0m" 200 -
+20:48:00,452 root INFO WebUI started
+20:48:44,73 root INFO Daemon started
+20:48:44,73 root INFO Checking wifi
+20:48:44,84 root INFO Wifi already connected, skipping hotspot starting
+20:48:44,84 root INFO No wifi connected, starting hotspot
+20:48:44,84 root INFO Hotspot started
+20:48:44,96 werkzeug INFO  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+20:50:22,12 root INFO WebUI started
+20:52:35,653 root INFO Daemon started
+20:52:35,653 root INFO Checking wifi
+20:52:35,663 root INFO Wifi already connected, skipping hotspot starting
+20:52:35,664 root INFO No wifi connected, starting hotspot
+20:52:35,664 root INFO Hotspot started
+20:52:35,676 werkzeug INFO  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+20:52:38,576 werkzeug INFO 192.168.1.14 - - [06/Nov/2023 20:52:38] "[37mGET / HTTP/1.1[0m" 200 -
+20:52:42,356 werkzeug INFO 192.168.1.14 - - [06/Nov/2023 20:52:42] "[37mGET /?ssid=delo&password= HTTP/1.1[0m" 200 -
+20:52:46,839 root INFO WebUI started
+20:52:48,872 root INFO Daemon started
+20:52:48,872 root INFO Checking wifi
+20:52:48,883 root INFO Wifi already connected, skipping hotspot starting
+20:52:48,883 root INFO No wifi connected, starting hotspot
+20:52:48,883 root INFO Hotspot started
+20:52:48,896 werkzeug INFO  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+20:53:16,343 werkzeug INFO 192.168.1.14 - - [06/Nov/2023 20:53:16] "[37mGET /?ssid=delo&password= HTTP/1.1[0m" 200 -
+20:53:17,536 werkzeug INFO 192.168.1.14 - - [06/Nov/2023 20:53:17] "[32mPOST /add HTTP/1.1[0m" 302 -
+20:53:17,596 werkzeug INFO 192.168.1.14 - - [06/Nov/2023 20:53:17] "[37mGET / HTTP/1.1[0m" 200 -
+20:53:21,477 daemon ERROR Exception on /add [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1953, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1968, in finalize_request
+    response = self.make_response(rv)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2097, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+20:53:21,483 werkzeug INFO 192.168.1.14 - - [06/Nov/2023 20:53:21] "[35m[1mPOST /add HTTP/1.1[0m" 500 -
+20:53:37,169 root INFO WebUI started
+20:53:38,2 root INFO Daemon started
+20:53:38,2 root INFO Checking wifi
+20:53:38,13 root INFO Wifi already connected, skipping hotspot starting
+20:53:38,13 root INFO No wifi connected, starting hotspot
+20:53:38,13 root INFO Hotspot started
+20:53:38,26 werkzeug INFO  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+20:53:39,838 werkzeug INFO 192.168.1.14 - - [06/Nov/2023 20:53:39] "[37mPOST /add HTTP/1.1[0m" 200 -
+20:56:00,777 root INFO WebUI started
+20:56:01,616 root INFO Daemon started
+20:56:01,616 root INFO Checking wifi
+20:56:01,627 root INFO Wifi already connected, skipping hotspot starting
+20:56:01,627 root INFO No wifi connected, starting hotspot
+20:56:01,627 root INFO Hotspot started
+20:56:01,640 werkzeug INFO  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+20:56:03,11 werkzeug INFO 192.168.1.14 - - [06/Nov/2023 20:56:03] "[37mGET / HTTP/1.1[0m" 200 -
+20:56:05,154 daemon ERROR Exception on /add [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/Progs/RpiAutoHotspot/daemon.py", line 23, in __add
+    return self.add()
+  File "/home/pi/Progs/RpiAutoHotspot/daemon.py", line 50, in add
+    config = '\n'.join(config_lines)
+NameError: name 'config_lines' is not defined
+20:56:05,162 werkzeug INFO 192.168.1.14 - - [06/Nov/2023 20:56:05] "[35m[1mPOST /add HTTP/1.1[0m" 500 -
+20:56:09,920 werkzeug INFO 192.168.1.14 - - [06/Nov/2023 20:56:09] "[37mGET / HTTP/1.1[0m" 200 -
+20:56:17,762 root INFO WebUI started
+20:56:18,632 root INFO Daemon started
+20:56:18,632 root INFO Checking wifi
+20:56:18,643 root INFO Wifi already connected, skipping hotspot starting
+20:56:18,643 root INFO No wifi connected, starting hotspot
+20:56:18,643 root INFO Hotspot started
+20:56:18,656 werkzeug INFO  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+20:56:20,200 werkzeug INFO 192.168.1.14 - - [06/Nov/2023 20:56:20] "[37mPOST /add HTTP/1.1[0m" 200 -
+20:58:50,826 root INFO WebUI started
+20:58:53,993 root INFO Daemon started
+20:58:53,993 root INFO Checking wifi
+20:58:54,3 root INFO Wifi already connected, skipping hotspot starting
+20:58:54,4 root INFO No wifi connected, starting hotspot
+20:58:54,4 root INFO Hotspot started
+20:58:54,16 werkzeug INFO  * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+20:58:55,50 werkzeug INFO 192.168.1.14 - - [06/Nov/2023 20:58:55] "[37mGET / HTTP/1.1[0m" 200 -
+20:59:00,314 werkzeug INFO 192.168.1.14 - - [06/Nov/2023 20:59:00] "[37mPOST /add HTTP/1.1[0m" 200 -
+20:59:02,928 werkzeug INFO 192.168.1.14 - - [06/Nov/2023 20:59:02] "[37mGET / HTTP/1.1[0m" 200 -
+20:59:13,527 root INFO WebUI started
