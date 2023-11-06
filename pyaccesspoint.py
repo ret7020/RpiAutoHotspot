@@ -58,7 +58,7 @@ rsn_pairwise=CCMP
 
 
 class AccessPoint:
-    def __init__(self, wlan='wlan0', inet=None, ip='192.168.45.1', netmask='255.255.255.0', ssid='MyAccessPoint',
+    def __init__(self, wlan='wlan0', inet=None, ip='192.168.45.1', netmask='255.255.255.0', ssid='AutoRpiHotspot',
                  password='1234567890'):
         self.wlan = wlan
         self.inet = inet
