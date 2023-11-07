@@ -122,7 +122,4 @@ if __name__ == "__main__":
         logging.info("Rebooting now...")
         os.system("sudo reboot")
         '''
-        
-    
 
-    
