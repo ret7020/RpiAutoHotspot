@@ -57,7 +57,6 @@ class WebUI:
             with open(NETPLAN_CONFIG_PATH, "a") as fd:
                 fd.write(network_config)
 
-            os.system("sudo netplan try")
             os.system("sudo netplan apply")
 
             return "OK"

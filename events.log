@@ -1,29 +1,53 @@
-14:17:38,464 root INFO Daemon started
-14:17:38,465 root INFO Checking wifi
-14:17:38,492 root INFO Wifi already connected, skipping hotspot starting
-14:17:38,493 root INFO No wifi connected, starting hotspot
-14:17:38,493 root INFO Hotspot started
-14:17:38,560 werkzeug INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+14:40:15,566 root INFO Daemon started
+14:40:15,567 root INFO Checking wifi
+14:40:15,588 root INFO Wifi already connected, skipping hotspot starting
+14:47:45,142 root INFO Daemon started
+14:47:45,150 root INFO Checking wifi
+14:47:45,179 root INFO Wifi already connected, skipping hotspot starting
+14:47:45,180 root INFO No wifi connected, starting hotspot
+14:47:45,181 root INFO Hotspot started
+14:47:45,246 werkzeug INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:7777
  * Running on http://192.168.0.13:7777
-14:17:38,561 werkzeug INFO [33mPress CTRL+C to quit[0m
-14:17:49,183 werkzeug INFO 192.168.0.172 - - [07/Nov/2023 14:17:49] "GET / HTTP/1.1" 200 -
-14:17:49,313 werkzeug INFO 192.168.0.172 - - [07/Nov/2023 14:17:49] "[36mGET /static/bootstrap.min.css HTTP/1.1[0m" 304 -
-14:17:49,381 werkzeug INFO 192.168.0.172 - - [07/Nov/2023 14:17:49] "[36mGET /static/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
-14:17:52,358 werkzeug INFO 192.168.0.172 - - [07/Nov/2023 14:17:52] "GET / HTTP/1.1" 200 -
-14:17:52,435 werkzeug INFO 192.168.0.172 - - [07/Nov/2023 14:17:52] "[36mGET /static/bootstrap.min.css HTTP/1.1[0m" 304 -
-14:17:52,448 werkzeug INFO 192.168.0.172 - - [07/Nov/2023 14:17:52] "[36mGET /static/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
-14:18:19,22 root INFO Daemon started
-14:18:19,23 root INFO Checking wifi
-14:18:19,71 root INFO Wifi already connected, skipping hotspot starting
-14:18:19,72 root INFO No wifi connected, starting hotspot
-14:18:19,73 root INFO Hotspot started
-14:18:19,142 werkzeug INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+14:47:45,247 werkzeug INFO [33mPress CTRL+C to quit[0m
+14:49:49,831 root INFO Daemon started
+14:49:49,838 root INFO Checking wifi
+14:49:49,885 root INFO Wifi already connected, skipping hotspot starting
+14:49:49,886 root INFO No wifi connected, starting hotspot
+14:49:49,887 root INFO Hotspot started
+14:49:49,940 werkzeug INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:7777
  * Running on http://192.168.0.13:7777
-14:18:19,143 werkzeug INFO [33mPress CTRL+C to quit[0m
-14:18:19,804 werkzeug INFO 192.168.0.172 - - [07/Nov/2023 14:18:19] "GET / HTTP/1.1" 200 -
-14:18:19,955 werkzeug INFO 192.168.0.172 - - [07/Nov/2023 14:18:19] "[36mGET /static/bootstrap.min.css HTTP/1.1[0m" 304 -
-14:18:19,968 werkzeug INFO 192.168.0.172 - - [07/Nov/2023 14:18:19] "[36mGET /static/bootstrap.bundle.min.js HTTP/1.1[0m" 304 -
+14:49:49,941 werkzeug INFO [33mPress CTRL+C to quit[0m
+14:54:21,28 root INFO Daemon started
+14:54:21,32 root INFO Checking wifi
+14:54:21,60 root INFO Wifi already connected, skipping hotspot starting
+14:54:21,61 root INFO No wifi connected, starting hotspot
+14:54:21,61 root INFO Hotspot started
+14:54:21,119 werkzeug INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:7777
+ * Running on http://192.168.0.13:7777
+14:54:21,119 werkzeug INFO [33mPress CTRL+C to quit[0m
+15:03:58,449 root INFO Daemon started
+15:03:58,453 root INFO Checking wifi
+15:03:58,479 root INFO Wifi already connected, skipping hotspot starting
+15:03:58,480 root INFO No wifi connected, starting hotspot
+15:03:58,481 root INFO Hotspot started
+15:03:58,554 werkzeug INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:7777
+ * Running on http://192.168.0.13:7777
+15:03:58,555 werkzeug INFO [33mPress CTRL+C to quit[0m
+16:13:42,212 root INFO Daemon started
+16:13:42,214 root INFO Checking wifi
+16:13:42,239 root INFO Wifi already connected, skipping hotspot starting
+16:13:42,240 root INFO No wifi connected, starting hotspot
+16:13:42,240 root INFO Hotspot started
+16:13:42,303 werkzeug INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:7777
+ * Running on http://192.168.0.13:7777
+16:13:42,303 werkzeug INFO [33mPress CTRL+C to quit[0m
