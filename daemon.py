@@ -4,11 +4,11 @@ import logging
 import os
 import subprocess
 import threading
-
+from config import *
 from flask import Flask, render_template, request, redirect
 
 class WebUI:
-    def __init__(self, name, host='0.0.0.0', port='8080'):
+    def __init__(self, name, host='0.0.0.0', port='7777'):
         self.app = Flask(name)
         self.host = host
         self.port = port
@@ -25,31 +25,40 @@ class WebUI:
     def index(self):
         logs = ""
         try:
-            with open("events.log") as fd:
+            with open(LOGS_PATH) as fd:
                 for line in (fd.readlines() [-25:]):
                     logs += line + "<br>"
         except Exception as e:
             logs = f"Can't read logs: {e}"
 
-        wpa_config = ""
+        wifi_config = ""
         try:
-            with open("/etc/wpa_supplicant/wpa_supplicant.conf") as fd:
-                wpa_config = fd.read()
+            with open(NETPLAN_CONFIG_PATH) as fd:
+                wifi_config = fd.read()
         except Exception as e:
-            wpa_config = "Can't read wpa_supplicant.conf: {e}"
+            wifi_config = "Can't read wpa_supplicant.conf: {e}"
 
-        return render_template("index.html", logs=logs, wpa_config=wpa_config.replace("\n", "<br>"))
+        return render_template("index.html", logs=logs, wifi_config=wifi_config.replace("\n", "<br>"))
+
     def add(self):
         ssid = request.form.get("ssid")
         password = request.form.get("password")
         if ssid and password:
-            config = ['\nnetwork={',
-                '\tssid="{}"'.format(ssid),
-                '\tpsk="{}"'.format(password),
-            '}']
-            config = '\n'.join(config)
-            with open("/etc/wpa_supplicant/wpa_supplicant.conf", "a") as fd:
-                fd.write(config)
+            print(ssid, password)
+            network_config = f'''
+        wlan0:
+            access-points:
+                "{ssid}":
+                    password: {password}
+            dhcp4: true
+            optional: true
+'''
+            print(network_config)
+            with open(NETPLAN_CONFIG_PATH, "a") as fd:
+                fd.write(network_config)
+
+            os.system("sudo netplan try")
+            os.system("sudo netplan apply")
 
             return "OK"
         else:
@@ -61,7 +70,7 @@ class WebUI:
 
 
 def led_blinking():
-    t = threading.currentThread()
+    t = threading.current_thread()
     while getattr(t, "do_run", True):
         os.system("echo 255 |sudo tee /sys/class/leds/led0/brightness")
         time.sleep(0.05)
@@ -77,7 +86,7 @@ def check_wifi():
         return None
 
 
-logging.basicConfig(filename="events.log",
+logging.basicConfig(filename=LOGS_PATH,
                         filemode='a',
                         format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
                         datefmt='%H:%M:%S',

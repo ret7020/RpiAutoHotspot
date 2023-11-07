@@ -1,0 +1,10 @@
+[Unit]
+Description=Run omni robot bringup
+
+[Service]
+Type=simple
+User=root
+ExecStart=/bin/bash -c 'sudo python3 /home/pi/RpiAutoHotspot/daemon.py'
+
+[Install]
+WantedBy=multi-user.target
